@@ -52,23 +52,39 @@ def pilihSektor():
     kursor = koneksi.cursor()
     
     # Sintaks query
-    kursor.execute("SELECT kode_sektor, nama_sektor FROM daftar_sektor;")
-    getData = kursor.fetchall()
+    kursor.execute("SELECT * FROM daftar_sektor;")
+    records = kursor.fetchall()
+    print(records)
 
-    # loop untuk unpack data dari SQL
-    namaSektor = []
+    kode_sektor = StringVar()
+    kode_sektor.set("IDX:")
     
-    for getdata in getData:
-        namaSektor += str(getdata) + "\n"
+    # Loop thru results
+    print_records = list(records)
 
-    myLabel = Label(master=sektor_window, text=namaSektor)
-    myLabel.grid(row=0, column=0)
+    for text, namasektor, topping in print_records:
+        Radiobutton(
+            master=sektor_window,
+            text=[text, namasektor],
+            variable=kode_sektor,
+            value=topping
+        ).grid(column=0, sticky=W, padx=10, pady=2)
+
+    def clicked(value):
+        myLabel = Label(master=sektor_window, text=value)
+        myLabel.grid(column=1, row=0, sticky=W)
+    
+    saveButton = Button(master=sektor_window, text="Save Option", command=lambda: clicked(kode_sektor.get))
+    saveButton.grid(column=0, row=12, padx=10, pady=2, sticky=W)
+
+    quitButton = Button(master=sektor_window, text="Cancel", command=sektor_window.destroy)
+    quitButton.grid(column=0, row=12, sticky=N+S)
 
     # myCheckBox = Checkbutton(master=sektor_window)
     
     # MySQL Parameter
     koneksi.commit()
-    koneksi.close()    
+    koneksi.close()
 
 
 # Label widget
@@ -84,6 +100,8 @@ waktuPembelian.grid(row=3, column=0, sticky=W, padx=10, pady=5)
 # Button widget
 sektor_select = Button(master=root, text="Click Here", command=pilihSektor)
 sektor_select.grid(row=0, column=1, sticky=W)
+ticker_select = Button(master=root, text="Click Here", command=pilihSektor)
+ticker_select.grid(row=1, column=1, sticky=W)
 kalkulasi_button = Button(master=root, text="Calculate Portfolio's")
 kalkulasi_button.grid(row=5, column=1, sticky=W)
 exit_button = Button(master=root, text="Quit Apps", command=quit, anchor=CENTER)

@@ -1,0 +1,24 @@
+Kode    Nama Perusahaan                             Tgl. Listing    Juml. Saham         Papan Pencatatan
+1	BMHS	Bundamedik Tbk.	06 Jul 2021	8.603.416.176	Utama
+2	CARE	Metro Healthcare Indonesia Tbk	13 Mar 2020	33.250.000.000	Pengembangan
+3	DGNS	Diagnos Laboratorium Utama Tbk	15 Jan 2021	1.250.000.000	Pengembangan
+4	DVLA	Darya-Varia Laboratoria Tbk.	11 Nov 1994	1.120.000.000	Utama
+5	HEAL	Medikaloka Hermina Tbk.	16 Mei 2018	14.890.000.000	Utama
+6	INAF	Indofarma Tbk.	17 Apr 2001	3.099.267.500	Utama
+7	IRRA	Itama Ranoraya Tbk.	15 Okt 2019	1.600.000.000	Pengembangan
+8	KAEF	Kimia Farma Tbk.	04 Jul 2001	5.554.000.000	Utama
+9	KLBF	Kalbe Farma Tbk.	30 Jul 1991	46.875.122.110	Utama
+10	MERK	Merck Tbk.	23 Jul 1981	448.000.000	PENGEMBANGAN
+11	MIKA	Mitra Keluarga Karyasehat Tbk.	24 Mar 2015	14.246.349.500	Utama
+12	PEHA	Phapros Tbk.	26 Des 2018	840.000.000	Utama
+13	PRDA	Prodia Widyahusada Tbk.	07 Des 2016	937.500.000	Utama
+14	PRIM	Royal Prima Tbk.	15 Mei 2018	3.393.434.905	Pengembangan
+15	PYFA	Pyridam Farma Tbk	16 Okt 2001	535.080.000	Pengembangan
+16	RSGK	Kedoya Adyaraya Tbk.	08 Sep 2021	929.675.000	Utama
+17	SAME	Sarana Meditama Metropolitan T	11 Jan 2013	17.113.987.263	Pengembangan
+18	SCPI	Organon Pharma Indonesia Tbk.	08 Jun 1990	3.600.000	PENGEMBANGAN
+19	SIDO	Industri Jamu dan Farmasi Sido	18 Des 2013	30.000.000.000	Utama
+20	SILO	Siloam International Hospitals	12 Sep 2013	1.625.765.625	Utama
+21	SOHO	Soho Global Health Tbk.	08 Sep 2020	1.269.168.239	Utama
+22	SRAJ	Sejahteraraya Anugrahjaya Tbk.	11 Apr 2011	12.000.705.445	Utama
+23	TSPC	Tempo Scan Pacific Tbk.	17 Jun 1994	4.509.864.300	Utama

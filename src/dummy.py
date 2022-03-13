@@ -1,6 +1,7 @@
 from pymysql.connections import Connection
 from pymysql import *
 from tkinter import *
+import pandas as pd
 
 # membuat koneksi ke MySQL
 koneksi = Connection(
@@ -27,27 +28,34 @@ def pilihSektor():
     )
     kursor = koneksi.cursor() # Membuat kursor untuk mengeksekusi program
 
-    kursor.execute("SELECT * FROM daftar_sektor;")
-    kdsektor = kursor.fetchall()
-
-
-    # second level eidget
+    # second level widget
     scnd_widget = Toplevel()
     scnd_widget.geometry('400x400')
 
-    kodeSektor = ""
-    namaSektor = ""
-    rowNumber = 0
+    # Slidebar widget
+    slideWidget = Scrollbar(
+        master=scnd_widget,
+        orient=VERTICAL
+    )
+    slideWidget.grid(row=0, column=0)
+
+    # kursor.execute("SELECT kode_sektor FROM daftar_sektor;")
+    # daftar_sektor = kursor.fetchall() # akan otomatis dikonversi menjadi tipe data tuple
     
-    while rowNumber <= 12:
-        rowNumber += 1
+    # Query the database
+    kursor.execute("SELECT * FROM daftar_sektor;")
+    records = kursor.fetchall()
+    print(records)
 
-
-    myLabel = Label(master=scnd_widget, text="")
-    myLabel.grid(row=0, column=0)
-
-    # myButton = Button(master=scnd_widget, text="Klik Saya!", command=pilihSektor)
-    # myButton.grid(row=0, column=1)
+    # Loop thru results
+    print_records = ''
+    variables = IntVar(master=scnd_widget)
+    
+    # for i in range(10):
+        
+    
+    query_label = Label(master=scnd_widget, text=print_records)
+    query_label.grid(row=0, column=0, columnspan=2)
 
     koneksi.commit() # Commit segala query yang di eksekusi
     koneksi.close() # Menutup commit setelah query di eksekusi
