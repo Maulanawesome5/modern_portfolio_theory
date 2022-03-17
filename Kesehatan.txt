@@ -1,24 +1,24 @@
 Kode    Nama Perusahaan                             Tgl. Listing    Juml. Saham         Papan Pencatatan
-1	BMHS	Bundamedik Tbk.	06 Jul 2021	8.603.416.176	Utama
-2	CARE	Metro Healthcare Indonesia Tbk	13 Mar 2020	33.250.000.000	Pengembangan
-3	DGNS	Diagnos Laboratorium Utama Tbk	15 Jan 2021	1.250.000.000	Pengembangan
-4	DVLA	Darya-Varia Laboratoria Tbk.	11 Nov 1994	1.120.000.000	Utama
-5	HEAL	Medikaloka Hermina Tbk.	16 Mei 2018	14.890.000.000	Utama
-6	INAF	Indofarma Tbk.	17 Apr 2001	3.099.267.500	Utama
-7	IRRA	Itama Ranoraya Tbk.	15 Okt 2019	1.600.000.000	Pengembangan
-8	KAEF	Kimia Farma Tbk.	04 Jul 2001	5.554.000.000	Utama
-9	KLBF	Kalbe Farma Tbk.	30 Jul 1991	46.875.122.110	Utama
-10	MERK	Merck Tbk.	23 Jul 1981	448.000.000	PENGEMBANGAN
-11	MIKA	Mitra Keluarga Karyasehat Tbk.	24 Mar 2015	14.246.349.500	Utama
-12	PEHA	Phapros Tbk.	26 Des 2018	840.000.000	Utama
-13	PRDA	Prodia Widyahusada Tbk.	07 Des 2016	937.500.000	Utama
-14	PRIM	Royal Prima Tbk.	15 Mei 2018	3.393.434.905	Pengembangan
-15	PYFA	Pyridam Farma Tbk	16 Okt 2001	535.080.000	Pengembangan
-16	RSGK	Kedoya Adyaraya Tbk.	08 Sep 2021	929.675.000	Utama
-17	SAME	Sarana Meditama Metropolitan T	11 Jan 2013	17.113.987.263	Pengembangan
-18	SCPI	Organon Pharma Indonesia Tbk.	08 Jun 1990	3.600.000	PENGEMBANGAN
-19	SIDO	Industri Jamu dan Farmasi Sido	18 Des 2013	30.000.000.000	Utama
-20	SILO	Siloam International Hospitals	12 Sep 2013	1.625.765.625	Utama
-21	SOHO	Soho Global Health Tbk.	08 Sep 2020	1.269.168.239	Utama
-22	SRAJ	Sejahteraraya Anugrahjaya Tbk.	11 Apr 2011	12.000.705.445	Utama
-23	TSPC	Tempo Scan Pacific Tbk.	17 Jun 1994	4.509.864.300	Utama
+BMHS	Bundamedik Tbk.	                            2021-07-06 	   8.603.416.176	Utama
+CARE	Metro Healthcare Indonesia Tbk.	            2020-03-13 	  33.250.000.000	Pengembangan
+DGNS	Diagnos Laboratorium Utama Tbk.	            2021-01-15 	   1.250.000.000	Pengembangan
+DVLA	Darya-Varia Laboratoria Tbk.	            1994-11-11 	   1.120.000.000	Utama
+HEAL	Medikaloka Hermina Tbk.	                    2018-05-16 	  14.890.000.000	Utama
+INAF	Indofarma Tbk.	                            2001-04-17 	   3.099.267.500	Utama
+IRRA	Itama Ranoraya Tbk.	                        2019-10-15 	   1.600.000.000	Pengembangan
+KAEF	Kimia Farma Tbk.	                        2001-07-04 	   5.554.000.000	Utama
+KLBF	Kalbe Farma Tbk.	                        1991-07-30 	  46.875.122.110	Utama
+MERK	Merck Tbk.	                                1981-07-23 	     448.000.000	PENGEMBANGAN
+MIKA	Mitra Keluarga Karyasehat Tbk.	            2015-03-24 	  14.246.349.500	Utama
+PEHA	Phapros Tbk.	                            2018-12-26 	     840.000.000	Utama
+PRDA	Prodia Widyahusada Tbk.	                    2016-12-07 	     937.500.000	Utama
+PRIM	Royal Prima Tbk.	                        2018-05-15 	   3.393.434.905	Pengembangan
+PYFA	Pyridam Farma Tbk.	                        2001-10-16 	     535.080.000	Pengembangan
+RSGK	Kedoya Adyaraya Tbk.	                    2021-09-08 	     929.675.000	Utama
+SAME	Sarana Meditama Metropolitan Tbk.	        2013-01-11 	  17.113.987.263	Pengembangan
+SCPI	Organon Pharma Indonesia Tbk.	            1990-06-08 	       3.600.000	PENGEMBANGAN
+SIDO	Industri Jamu dan Farmasi Sidomuncul Tbk.	2013-12-18 	  30.000.000.000	Utama
+SILO	Siloam International Hospitals Tbk.	        2013-09-12 	   1.625.765.625	Utama
+SOHO	Soho Global Health Tbk.	                    2020-09-08 	   1.269.168.239	Utama
+SRAJ	Sejahteraraya Anugrahjaya Tbk.	            2011-04-11 	  12.000.705.445	Utama
+TSPC	Tempo Scan Pacific Tbk.	                    1994-06-17 	   4.509.864.300	Utama

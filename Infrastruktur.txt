@@ -1,59 +1,59 @@
-Kode    Nama Perusahaan                             Tgl. Listing    Juml. Saham         Papan Pencatatan
-1	ACST	Acset Indonusa Tbk.	24 Jun 2013	12.675.160.000	Utama
-2	ADHI	Adhi Karya (Persero) Tbk.	18 Mar 2004	3.560.849.376	Utama
-3	BALI	Bali Towerindo Sentra Tbk.	13 Mar 2014	3.934.592.500	Utama
-4	BTEL	Bakrie Telecom Tbk.	03 Feb 2006	36.822.665.755	Utama
-5	BUKK	Bukaka Teknik Utama Tbk.	29 Jun 2015	2.640.452.000	Pengembangan
-6	CASS	Cardig Aero Services Tbk.	05 Des 2011	2.086.950.000	Pengembangan
-7	CENT	Centratama Telekomunikasi Indo	01 Nov 2001	31.183.464.900	Pengembangan
-8	CMNP	Citra Marga Nusaphala Persada	10 Jan 1995	5.433.721.755	Utama
-9	DGIK	Nusa Konstruksi Enjiniring Tbk	19 Des 2007	5.541.165.000	Utama
-10	EXCL	XL Axiata Tbk.	29 Sep 2005	10.724.674.776	Utama
-11	FIMP	Fimperkasa Utama Tbk.	09 Apr 2021	400.000.955	Akselerasi
-12	FREN	Smartfren Telecom Tbk.	29 Nov 2006	308.106.726.183	Utama
-13	GHON	Gihon Telekomunikasi Indonesia	09 Apr 2018	550.000.000	Utama
-14	GMFI	Garuda Maintenance Facility Ae	10 Okt 2017	28.233.511.500	Utama
-15	GOLD	Visi Telekomunikasi Infrastruk	07 Jul 2010	1.277.276.000	PENGEMBANGAN
-16	HADE	Himalaya Energi Perkasa Tbk.	12 Apr 2004	2.120.000.000	PENGEMBANGAN
-17	IBST	Inti Bangun Sejahtera Tbk.	31 Ags 2012	1.350.904.927	Utama
-18	IDPR	Indonesia Pondasi Raya Tbk.	10 Des 2015	2.003.000.000	Utama
-19	IPCC	Indonesia Kendaraan Terminal T	09 Jul 2018	1.818.384.820	Utama
-20	IPCM	Jasa Armada Indonesia Tbk.	22 Des 2017	5.284.811.100	Utama
-21	ISAT	Indosat Tbk.	19 Okt 1994	8.062.702.740	Utama
-22	JAST	Jasnita Telekomindo Tbk.	16 Mei 2019	813.626.700	Pengembangan
-23	JKON	Jaya Konstruksi Manggala Prata	04 Des 2007	16.308.519.860	Utama
-24	JSMR	Jasa Marga (Persero) Tbk.	12 Nov 2007	7.257.871.200	Utama
-25	KARW	ICTSI Jasa Prima Tbk.	20 Des 1994	587.152.700	Pengembangan
-26	KBLV	First Media Tbk.	25 Feb 2000	1.742.167.907	Pengembangan
-27	KEEN	Kencana Energi Lestari Tbk.	02 Sep 2019	3.666.312.500	Utama
-28	LAPD	Leyand International Tbk.	17 Jul 2001	3.966.350.139	Pengembangan
-29	LCKM	LCK Global Kedaton Tbk.	16 Jan 2018	1.000.000.000	Pengembangan
-30	LINK	Link Net Tbk.	02 Jun 2014	2.863.195.484	Utama
-31	META	Nusantara Infrastructure Tbk.	18 Jul 2001	17.710.708.194	Utama
-32	MPOW	Megapower Makmur Tbk.	05 Jul 2017	816.997.053	Pengembangan
-33	MTEL	Dayamitra Telekomunikasi Tbk.	22 Nov 2021	83.515.452.844	Utama
-34	MTPS	Meta Epsi Tbk.	10 Apr 2019	2.084.850.829	PENGEMBANGAN
-35	MTRA	Mitra Pemuda Tbk.	10 Feb 2016	770.000.000	Pengembangan
-36	NRCA	Nusa Raya Cipta Tbk.	27 Jun 2013	2.496.258.344	UTAMA
-37	OASA	Protech Mitra Perkasa Tbk.	18 Jul 2016	358.600.000	Pengembangan
-38	PBSA	Paramita Bangun Sarana Tbk.	28 Sep 2016	1.500.000.000	Utama
-39	PORT	Nusantara Pelabuhan Handal Tbk	16 Mar 2017	2.813.941.985	Pengembangan
-40	POWR	Cikarang Listrindo Tbk.	14 Jun 2016	16.087.156.000	Pengembangan
-41	PPRE	PP Presisi Tbk.	24 Nov 2017	10.224.271.000	Utama
-42	PTDU	Djasa Ubersakti Tbk.	08 Des 2020	1.500.000.000	Pengembangan
-43	PTPP	PP (Persero) Tbk.	09 Feb 2010	6.199.897.354	Utama
-44	PTPW	Pratama Widya Tbk.	07 Feb 2020	878.187.500	Pengembangan
-45	RONY	Aesler Grup Internasional Tbk.	09 Apr 2020	1.250.000.000	Pengembangan
-46	SMKM	Sumber Mas Konstruksi Tbk.	09 Mar 2022	1.253.000.000	Akselerasi
-47	SSIA	Surya Semesta Internusa Tbk.	27 Mar 1997	4.705.249.440	Utama
-48	SUPR	Solusi Tunas Pratama Tbk.	11 Okt 2011	1.137.579.698	Pengembangan
-49	TAMA	Lancartama Sejati Tbk.	10 Feb 2020	1.000.000.005	Pengembangan
-50	TBIG	Tower Bersama Infrastructure T	26 Okt 2010	22.656.999.445	Utama
-51	TGRA	Terregra Asia Energy Tbk.	16 Mei 2017	2.750.000.000	UTAMA
-52	TLKM	Telkom Indonesia (Persero) Tbk	14 Nov 1995	99.062.216.600	Utama
-53	TOPS	Totalindo Eka Persada Tbk.	16 Jun 2017	33.330.000.000	Utama
-54	TOTL	Total Bangun Persada Tbk.	25 Jul 2006	3.410.000.000	Utama
-55	TOWR	Sarana Menara Nusantara Tbk.	08 Mar 2010	51.014.625.000	Utama
-56	WEGE	Wijaya Karya Bangunan Gedung T	30 Nov 2017	9.572.000.000	Utama
-57	WIKA	Wijaya Karya (Persero) Tbk.	29 Okt 2007	8.969.951.372	Utama
-58	WSKT	Waskita Karya (Persero) Tbk.	19 Des 2012	28.806.807.016	Utama
+Kode    Nama Perusahaan                             Tgl. Listing    Juml. Saham      Papan Pencatatan
+ACST	Acset Indonusa Tbk.	                        2013-06-24	    12675160000      Utama
+ADHI	Adhi Karya (Persero) Tbk.	                2004-03-18	     3560849376      Utama
+BALI	Bali Towerindo Sentra Tbk.	                2014-03-13	     3934592500      Utama
+BTEL	Bakrie Telecom Tbk.	                        2006-02-03	    36822665755      Utama
+BUKK	Bukaka Teknik Utama Tbk.	                2015-06-29	     2640452000      Pengembangan
+CASS	Cardig Aero Services Tbk.	                2011-12-05	     2086950000      Pengembangan
+CENT	Centratama Telekomunikasi Indonesia Tbk.	2001-11-01	    31183464900      Pengembangan
+CMNP	Citra Marga Nusaphala Persada Tbk.	        1995-01-10	     5433721755      Utama
+DGIK	Nusa Konstruksi Enjiniring Tbk.	            2007-12-19	     5541165000      Utama
+EXCL	XL Axiata Tbk.	                            2005-09-29	    10724674776      Utama
+FIMP	Fimperkasa Utama Tbk.	                    2021-04-09	      400000955      Akselerasi
+FREN	Smartfren Telecom Tbk.	                    2006-11-29	   308106726183      Utama
+GHON	Gihon Telekomunikasi Indonesia Tbk.	        2018-04-09	      550000000      Utama
+GMFI	Garuda Maintenance Facility Aero Asia Tbk.	2017-10-10	    28233511500      Utama
+GOLD	Visi Telekomunikasi Infrastruktur Tbk.	    2010-07-07	     1277276000      PENGEMBANGAN
+HADE	Himalaya Energi Perkasa Tbk.	            2004-04-12	     2120000000      PENGEMBANGAN
+IBST	Inti Bangun Sejahtera Tbk.	                2012-08-31	     1350904927      Utama
+IDPR	Indonesia Pondasi Raya Tbk.	                2015-12-10	     2003000000      Utama
+IPCC	Indonesia Kendaraan Terminal Tbk.	        2018-07-09	     1818384820      Utama
+IPCM	Jasa Armada Indonesia Tbk.	                2017-12-22	     5284811100      Utama
+ISAT	Indosat Tbk.	                            1994-10-19	     8062702740      Utama
+JAST	Jasnita Telekomindo Tbk.	                2019-05-16	      813626700      Pengembangan
+JKON	Jaya Konstruksi Manggala Pratama Tbk.	    2007-12-04	    16308519860      Utama
+JSMR	Jasa Marga (Persero) Tbk.	                2007-11-12	     7257871200      Utama
+KARW	ICTSI Jasa Prima Tbk.	                    1994-12-20	      587152700      Pengembangan
+KBLV	First Media Tbk.	                        2000-02-25	     1742167907      Pengembangan
+KEEN	Kencana Energi Lestari Tbk.	                2019-09-02	     3666312500      Utama
+LAPD	Leyand International Tbk.	                2001-07-17	     3966350139      Pengembangan
+LCKM	LCK Global Kedaton Tbk.	                    2018-01-16	     1000000000      Pengembangan
+LINK	Link Net Tbk.	                            2014-06-02	     2863195484      Utama
+META	Nusantara Infrastructure Tbk.	            2001-07-18	    17710708194      Utama
+MPOW	Megapower Makmur Tbk.	                    2017-07-05	      816997053      Pengembangan
+MTEL	Dayamitra Telekomunikasi Tbk.	            2021-11-22	    83515452844      Utama
+MTPS	Meta Epsi Tbk.	                            2019-04-10	     2084850829      PENGEMBANGAN
+MTRA	Mitra Pemuda Tbk.	                        2016-02-10	      770000000      Pengembangan
+NRCA	Nusa Raya Cipta Tbk.	                    2013-06-27	     2496258344      UTAMA
+OASA	Protech Mitra Perkasa Tbk.	                2016-07-18	      358600000      Pengembangan
+PBSA	Paramita Bangun Sarana Tbk.	                2016-09-28	     1500000000      Utama
+PORT	Nusantara Pelabuhan Handal Tbk.	            2017-03-16	     2813941985      Pengembangan
+POWR	Cikarang Listrindo Tbk.	                    2016-06-14	    16087156000      Pengembangan
+PPRE	PP Presisi Tbk.	                            2017-11-24	    10224271000      Utama
+PTDU	Djasa Ubersakti Tbk.	                    2020-12-08	     1500000000      Pengembangan
+PTPP	PP (Persero) Tbk.	                        2010-02-09	     6199897354      Utama
+PTPW	Pratama Widya Tbk.	                        2020-02-07	      878187500      Pengembangan
+RONY	Aesler Grup Internasional Tbk.	            2020-04-09	     1250000000      Pengembangan
+SMKM	Sumber Mas Konstruksi Tbk.	                2022-03-09	     1253000000      Akselerasi
+SSIA	Surya Semesta Internusa Tbk.	            1997-03-27	     4705249440      Utama
+SUPR	Solusi Tunas Pratama Tbk.	                2011-10-11	     1137579698      Pengembangan
+TAMA	Lancartama Sejati Tbk.	                    2020-02-10	     1000000005      Pengembangan
+TBIG	Tower Bersama Infrastructure Tbk.           2010-10-26	    22656999445      Utama
+TGRA	Terregra Asia Energy Tbk.	                2017-05-16	     2750000000      UTAMA
+TLKM	Telkom Indonesia (Persero) Tbk.	            1995-11-14	    99062216600      Utama
+TOPS	Totalindo Eka Persada Tbk.	                2017-06-16	    33330000000      Utama
+TOTL	Total Bangun Persada Tbk.	                2006-07-25	     3410000000      Utama
+TOWR	Sarana Menara Nusantara Tbk.	            2010-03-08	    51014625000      Utama
+WEGE	Wijaya Karya Bangunan Gedung Tbk.	        2017-11-30	     9572000000      Utama
+WIKA	Wijaya Karya (Persero) Tbk.	                2007-10-29	     8969951372      Utama
+WSKT	Waskita Karya (Persero) Tbk.	            2012-12-19	    28806807016      Utama

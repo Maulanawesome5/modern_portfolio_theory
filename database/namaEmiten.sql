@@ -29,6 +29,10 @@ UPDATE daftar_saham_indonesia
 SET sektor_usaha = 'Properti & Real Estate'
 WHERE kode_sektor = 'IDX:H';
 
+UPDATE daftar_saham_indonesia
+SET sektor_usaha = 'Kesehatan'
+WHERE kode_sektor = 'IDX:F';
+
 -- Membuat UNIQUE KEY terhadap kode saham agar tidak ada ticker yang kembar
 ALTER TABLE daftar_saham_indonesia
 	ADD CONSTRAINT uk_kode_saham UNIQUE (kodeSaham);
@@ -37,6 +41,7 @@ ALTER TABLE daftar_saham_indonesia
 -- UPDATE daftar_saham_indonesia SET kode_sektor = 'IDX:K' WHERE id < 30;
 UPDATE daftar_saham_indonesia SET sektor_usaha = 'Teknologi' WHERE kode_sektor = 'IDX:I'; -- Data akan direplace semua karena foreign key sama
 UPDATE daftar_saham_indonesia SET sektor_usaha = 'Transportasi & Logistik' WHERE kode_sektor = 'IDX:K'; -- Data akan direplace semua karena foreign key sama
+UPDATE daftar_saham_indonesia SET sektor_usaha = 'Infrastruktur' WHERE kode_sektor = 'IDX:J';
 
 
 -- Metode untuk selection
@@ -53,6 +58,10 @@ INSERT INTO daftar_saham_indonesia (kodeSaham, namaEmiten, tglListing)
 VALUES ('HRUM', 'Harum Wangi', '1999-06-30'); -- Error, karena kode saham HRUM sudah ada, keuntungan menggunakan 'unique key'
 INSERT INTO daftar_saham_indonesia (kode_sektor, kodeSaham, namaEmiten, tglListing)
 VALUES ('IDX:Y', 'PWON', 'Pawon Dapur', '2001-06-30'); -- Error, karena foreign key 'IDX:Y' tidak ada di tabel reference
+INSERT INTO daftar_saham_indonesia (kodeSaham, namaEmiten, tglListing)
+VALUES ('KAEF', 'Kimia Farmasi', '2100-01-30'); -- Error, karena kode saham KAEF sudah ada, keuntungan menggunakan 'unique key'
+INSERT INTO daftar_saham_indonesia (kode_sektor, kodeSaham, namaEmiten, tglListing)
+VALUES ('IDX:F', 'BMHS', 'Bunda Memang Menggoda', '2001-06-30'); -- Error, meskipun Foreign Key benar, karena BMHS sudah ada maka tidak bisa dimasukkan
 
 
 DESCRIBE daftar_saham_indonesia; -- Mendeskripsi struktur tabel
