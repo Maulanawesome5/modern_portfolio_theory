@@ -1,8 +1,8 @@
 # dummy program untuk membuat modern portfolio theory
 from tkinter import *
+from tkinter import ttk
 from pandas_datareader import DataReader
 from pymysql import *
-from tabulate import tabulate
 import tkinter
 
 # top level widget
@@ -41,28 +41,38 @@ def Pilih_Ticker():
 
     Second_Top = Toplevel()
     Second_Top.title(f'Daftar Saham Sektor Properti')
+    # Second_Top.resizable(width=False, height=False)
+    Second_Top.grid_columnconfigure(index=0, weight=1)
+    Second_Top.grid_rowconfigure(index=0, weight=1)
 
     # MySQL Parameter
     koneksi = Connection(host='localhost', user='root', database='saham_indonesia')
     kursor = koneksi.cursor()
-    
+
     kursor.execute(f"""SELECT kodeSaham, namaEmiten FROM daftar_saham_indonesia WHERE kode_sektor = '{Kode_Sektor}';""")
     query = kursor.fetchall()
 
     show_query = '' # empty string
+    ticker_only = '' # empty string
     # Lakukan loop untuk unpacking seluruh record data
     for data in query:
         show_query += str(data[0]) + "\t" + str(data[1]) + '\n'
 
-    Ticker_Label = Label(master=Second_Top, text=show_query, justify='left', padx=10, pady=5)
-    Ticker_Label.grid(column=0, row=0, sticky=W)
+    # Ticker_Label = Label(master=Second_Top, text=show_query, justify='left', padx=10, pady=5)
+    # Ticker_Label.grid(column=0, row=0, sticky=W)
 
-    # Membuat button untuk halaman 1 dan seterusnya
-    
+    Ticker = Listbox(master=Second_Top, listvariable=show_query)
+    Ticker.grid(column=0, row=0, sticky=(W+E))
+
+    scrollbar = ttk.Scrollbar(master=Second_Top, orient=VERTICAL, command=Ticker.yview)
+    scrollbar.grid(column=1, row=0, sticky=(N+S))
+
+    Ticker['yscrollcommand'] = scrollbar.set(first=0, last=0)
 
     # MySQL Parameter
     koneksi.commit()
     koneksi.close()
+
 
 # method untuk memanggil dataframe
 def call_dataframe():
