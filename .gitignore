@@ -1,4 +1,4 @@
 # abaikan folder dan beberapa file ini agar tidak ikut di commit
-.idea/*
+.idea
 abcd.txt
-doc/*
+doc
