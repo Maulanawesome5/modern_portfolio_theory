@@ -15,9 +15,11 @@ koneksi.commit() # Commit segala query yang di eksekusi
 koneksi.close() # Menutup commit setelah query di eksekusi
 
 # directory file harga saham (sample)
-IHSG = "D:/LATIHAN PEMROGRAMAN/(DATA SAHAM)/Master Data/IDX_Composite_master_data.xlsx"
+master_data_directory = "D:/LATIHAN PEMROGRAMAN/(DATA SAHAM)/Master Data"
 
 # membuat dataframe dengan modul pandas
-df = pd.read_excel(IHSG)
-print(df)
+ihsg = pd.read_excel(master_data_directory+"/IDX_Composite_master_data.xlsx")
+print(ihsg)
 
+apln = pd.read_excel(master_data_directory+"/APLN_master_data.xlsx")
+print(apln)
