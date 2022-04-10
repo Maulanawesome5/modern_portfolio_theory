@@ -1,55 +1,54 @@
+from tkinter import ttk
 from pymysql import *
 from tkinter import *
 
 koneksi = Connection(host="localhost", user="root", database="saham_indonesia")
 kursor = koneksi.cursor()
 
-# Query untuk memilih kolom kode_sektor saja
-kursor.execute("""SELECT kode_sektor FROM daftar_sektor;""")
-Query_Kode_Sektor = kursor.fetchall()
-# print(Query_Kode_Sektor) # Hasilnya bertipe data nested tuple
+## Query untuk mengambil seluruh data dari tabel daftar_sektor
+kursor.execute("""SELECT * FROM daftar_sektor;""")
+Daftar_Sektor = kursor.fetchall()
 
-Kode_Sektor = '' # empty string
-for kodesektor in Query_Kode_Sektor:
-    Kode_Sektor += kodesektor[0] + '\n'
-
+## Parameter untuk commit dan menutup koneksi SQL setelah proses fetch
 koneksi.commit()
 koneksi.close()
 
-print(Kode_Sektor, '\n', type(Kode_Sektor))
+print(f"Daftar Sektor Emiten Bursa Efek Indonesia \n{Daftar_Sektor}") # Hasilnya bertipe data nested tuple
+# print(len(Daftar_Sektor)) # Jumlah isi data = 12
 
-# method untuk memanggil window baru yang berisi pilihan kode sektor
-def Pilih_Sektor():
-    koneksi = Connection(host="localhost", user="root", database="saham_indonesia")
-    kursor = koneksi.cursor()
+Kode_Sektor = [] # list kosong untuk menampung kode_sektor
+Nama_Sektor = [] # list kosong untuk menampung nama_sektor
+
+for i in range(len(Daftar_Sektor)):
+    j = 0
+    if j <= 1:
+        Kode_Sektor.append(Daftar_Sektor[i][0])
+        Nama_Sektor.append(Daftar_Sektor[i][1])
+    # Kode_Sektor,Nama_Sektor.insert(Daftar_Sektor[i][1])
     
-    kursor.execute("SELECT nama_sektor FROM daftar_sektor;")
-    Query_Nama_Sektor = kursor.fetchall()
+print(Kode_Sektor) # Hasilnya ['IDX:A', 'IDX:B', 'IDX:C', 'IDX:D', 'IDX:E', 'IDX:F', 'IDX:G', 'IDX:H', 'IDX:I', 'IDX:J', 'IDX:K', 'IDX:Z']
+print(Nama_Sektor) # Hasilnya ['Energi', 'Barang Baku', 'Perindustrian', 'Barang Konsumen Primer', 'Barang Konsumen Non-Primer', 'Kesehatan', 'Keuangan', 'Properti & Real Estate', 'Teknologi', 'Infrastruktur', 'Transportasi & Logistik', 'Produk Investasi Tercatat']
 
-    Nama_Sektor = '' # empty string
-    for namasektor in Query_Nama_Sektor:
-        Nama_Sektor += namasektor[0] + '\n'
 
-    L_kode_sektor = Label(master=root, text=Nama_Sektor)
-    L_kode_sektor.pack()
-
-    koneksi.commit()
-    koneksi.close()
-
-# window tkinter
+## Program GUI
 root = Tk()
-root.title('Lihat sektor saham')
+root.geometry('300x300')
+root.title('Uji Coba Fitur Sektor')
 
-B_pilih_sektor = Button(master=root, text='Tekan ini..!', command=Pilih_Sektor)
-B_pilih_sektor.pack()
+myLabel = Label(master=root, text="Uji coba memilih isi Combobox")
+myLabel.pack()
+
+List_Sektor = ttk.Combobox(master=root, width=30, height=1, justify=LEFT, values=Nama_Sektor, textvariable=Kode_Sektor)
+List_Sektor.pack()
+
+# Fungsi / method untuk menunjukkan opsi yang dipilih melalui combobox
+def Cek_Hasil():
+    Pilihan = Label(master=root, text=List_Sektor.get())
+    Pilihan.pack()
+
+myButton = Button(master=root, text="Tampilkan pilihan", command=Cek_Hasil)
+myButton.pack()
+
+
 
 root.mainloop()
-
-""" ===== SEKTOR YANG TERSEDIA DIDALAM DBMS =====
-    IDX:A Energi
-    IDX:F Kesehatan
-    IDX:H Properti & Real Estate
-    IDX:I Teknologi
-    IDX:J Infrastruktur
-    IDX:K Transportasi & Logistik
-"""
