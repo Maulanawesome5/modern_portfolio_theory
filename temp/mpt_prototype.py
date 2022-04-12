@@ -18,22 +18,20 @@ root_frame.grid(column=0, row=0, sticky=(N, W, E, S), columnspan=10, rowspan=10)
 koneksi = Connection(host='localhost', user='root', database='saham_indonesia')
 kursor = koneksi.cursor()
 
-# method untuk memilih sektor
-def Pilih_Sektor():
-    global sektor_label
-    global Nama_Sektor
+# Memilih kode sektor dan nama sektor
+kursor.execute("SELECT * FROM daftar_sektor;")
+Daftar_Sektor = kursor.fetchall()
 
-    Kode_Sektor = 'IDX:H'
-    Nama_Sektor = 'Properti & Real Estate'
+# List kosong yang akan menampung ticker dan nama perusahaan dari MySQL
+Kode_Sektor = []
+Nama_Sektor = []
 
-    sektor_label = Label(
-        master=root_frame, 
-        text=Kode_Sektor + "\t" + Nama_Sektor, 
-        background="#535353", 
-        foreground="#FFFFFF", 
-        textvariable=Kode_Sektor
-    )
-    sektor_label.grid(column=2, row=1, sticky=W, padx=10, pady=5)
+for i in range(len(Daftar_Sektor)):
+    j = 0
+    if j <= 1:
+        Kode_Sektor.append(Daftar_Sektor[i][0])
+        Nama_Sektor.append(Daftar_Sektor[i][1])
+        # Kode_Sektor,Nama_Sektor.insert(Daftar_Sektor[i][1])
 
 # method untuk memilih kode saham berdasarkan sektor
 def Pilih_Ticker():
@@ -99,7 +97,10 @@ waktuPembelian = Label(master=root_frame, text="Tanggal Transaksi", background="
 waktuPembelian.grid(row=4, column=0, sticky=W, padx=10, pady=5)
 
 # Button widget
-sektor_select = Button(master=root_frame, text="Daftar Sektor", background="#6A6A6A", activebackground="#707070", foreground="#FFFFFF", activeforeground="#FFFFFF",command=Pilih_Sektor)
+sektor_select = ttk.Combobox(
+    master=root_frame, width=30, height=1, justify=LEFT, background="#6A6A6A", foreground="#FFFFFF",
+    values=Nama_Sektor, textvariable=Kode_Sektor
+)
 sektor_select.grid(row=1, column=1, sticky=W)
 ticker_select = Button(
     master=root_frame, 
