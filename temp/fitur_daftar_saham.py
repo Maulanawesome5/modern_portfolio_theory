@@ -33,6 +33,9 @@ def Pilih_Saham():
     second.geometry("500x500")
     second.title("Pilih Saham")
 
+    global Ticker_Saham
+    global Nama_Emiten
+
     # List kosong untuk menampung ticker dan nama emiten setelah di looping
     Ticker_Saham = []
     Nama_Emiten = []
@@ -41,8 +44,10 @@ def Pilih_Saham():
         Ticker_Saham.append(Emiten[i][0])
         Nama_Emiten.append(Emiten[i][1])
 
-    L_Ticker_Saham = Label(master=second, text=Nama_Emiten, justify=LEFT)
-    L_Ticker_Saham.grid(column=0, row=0)
+    while i <= len(Emiten):
+        ceklist_saham = Checkbutton(master=second, variable=Ticker_Saham, text=Nama_Emiten)
+        ceklist_saham.grid(column=0, row=i)
+        i += 1
 
     koneksi.commit()
     koneksi.close()
@@ -57,6 +62,12 @@ L_Pilih_Sektor = Label(master=mainan, text="Daftar Sektor")
 L_Pilih_Sektor.grid(column=0, row=0, sticky=W, padx=5, pady=10)
 L_Pilih_Saham = Label(master=mainan, text="Daftar Saham")
 L_Pilih_Saham .grid(column=0, row=1, sticky=W, padx=5, pady=10)
+
+# L_Ticker_Saham = Label(master=second, text=str(Ticker_Saham) + "\n", justify=LEFT)
+# L_Ticker_Saham.grid(column=0, row=0)
+
+# L_Nama_Emiten = Label(master=second, text=str(Nama_Emiten) + "\n", justify=LEFT)
+# L_Nama_Emiten.grid(column=1, row=0)
 
 C_Pilih_Sektor = ttk.Combobox(
     master=mainan, width=30, height=1, justify=LEFT,
