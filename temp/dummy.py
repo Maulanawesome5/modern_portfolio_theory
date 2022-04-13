@@ -53,12 +53,34 @@ myLabel.pack()
 List_Sektor = ttk.Combobox(master=root, width=30, height=1, justify=LEFT, values=Nama_Sektor, textvariable=Kode_Sektor)
 List_Sektor.pack()
 
+
 def Cek_Hasil():
     Pilihan = Label(master=root, text=List_Sektor.get())
     Pilihan.pack()
 
 
+def Daftar_Saham():
+    koneksi = Connection(host="localhost", user="root", database="saham_indonesia")
+    kursor = koneksi.cursor()
+    kursor.execute(f"SELECT kodeSaham, namaEmiten FROM daftar_saham_indonesia WHERE sektor_usaha = '{List_Sektor.get()}';")
+    daftarSaham = kursor.fetchall()
+
+    # second = Toplevel()
+    # second.title(f"Pilih Saham Sektor {List_Sektor.get()}")
+
+    print(daftarSaham)
+    
+    # myLabel = Label(master=root, text=daftarSaham)
+    # myLabel.pack()
+
+    koneksi.commit()
+    koneksi.close()
+
+
 myButton = Button(master=root, text="Tampilkan pilihan", command=Cek_Hasil)
 myButton.pack()
+
+pilih_kode_saham = Button(master=root, text="Pilih Saham", command=Daftar_Saham)
+pilih_kode_saham.pack()
 
 root.mainloop()
