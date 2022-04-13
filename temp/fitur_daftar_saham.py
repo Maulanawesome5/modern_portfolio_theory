@@ -30,7 +30,6 @@ def Pilih_Saham():
     Emiten = kursor.fetchall()
 
     second = Toplevel()
-    second.geometry("500x500")
     second.title("Pilih Saham")
 
     global Ticker_Saham
@@ -45,7 +44,11 @@ def Pilih_Saham():
         Nama_Emiten.append(Emiten[i][1])
 
     while i <= len(Emiten):
-        ceklist_saham = Checkbutton(master=second, variable=Ticker_Saham, text=Nama_Emiten)
+        ceklist_saham = Checkbutton(
+            master=second,
+            variable=Ticker_Saham,
+            text=(str(Ticker_Saham) + "\t" + str(Nama_Emiten) + "\n")
+        )
         ceklist_saham.grid(column=0, row=i)
         i += 1
 
@@ -69,20 +72,15 @@ L_Pilih_Saham .grid(column=0, row=1, sticky=W, padx=5, pady=10)
 # L_Nama_Emiten = Label(master=second, text=str(Nama_Emiten) + "\n", justify=LEFT)
 # L_Nama_Emiten.grid(column=1, row=0)
 
-C_Pilih_Sektor = ttk.Combobox(
-    master=mainan, width=30, height=1, justify=LEFT,
-    values=Nama_Sektor, textvariable=Kode_Sektor
-)
+C_Pilih_Sektor = ttk.Combobox(master=mainan, width=30, height=1, justify=LEFT, values=Nama_Sektor, textvariable=Kode_Sektor)
 C_Pilih_Sektor.grid(column=1, row=0, sticky=W, padx=5, pady=10)
-B_Pilih_Ticker = Button(
-    master=mainan, text="Pilih Ticker Saham", command=Pilih_Saham
-)
+B_Pilih_Ticker = Button(master=mainan, text="Pilih Ticker Saham", command=Pilih_Saham)
 B_Pilih_Ticker.grid(column=1, row=1, sticky=W, padx=5, pady=10)
 
 # C_Pilih_Ticker = ttk.Checkbutton()
 # C_Pilih_Ticker.grid()
 
 
+mainan.mainloop() # tkinter top level widget loop
 koneksi.commit()
 koneksi.close()
-mainan.mainloop() # tkinter top level widget loop
