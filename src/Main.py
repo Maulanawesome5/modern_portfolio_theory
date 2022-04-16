@@ -74,6 +74,7 @@ def Select_Stocks():
     Koneksi.close()
 
     # Second window untuk menampilkan daftar saham
+    # Second window untuk menampilkan daftar saham
     Window_Saham = tkinter.Toplevel()
     Window_Saham.title(f"Daftar Saham Sektor {Input_Sektor.get()}")
     Window_Saham.iconbitmap('D:/LATIHAN PEMROGRAMAN/(METODE PENELITIAN)/icon/business_stock.ico')
@@ -82,30 +83,32 @@ def Select_Stocks():
     Frame_Window_Saham.pack(fill=BOTH, anchor=CENTER, side=TOP)
 
     Mini_Frame = tkinter.Frame(
-        master=Window_Saham, width=40, height=1, background="#535353", relief=tkinter.GROOVE, border=2,
+        master=Frame_Window_Saham, width=40, height=1, background="#535353", relief=tkinter.GROOVE, border=2,
     ) # Mini frame untuk mengatur layout 2 button
-    Mini_Frame.pack(fill=BOTH, anchor=CENTER, side=TOP)
+    # Mini_Frame.pack(fill=BOTH, anchor=CENTER, side=TOP)
+    Mini_Frame.grid(column=1, row=0)
 
     for i in range(len(Daftar_Saham)):
-        Pilihan_Saham = tkinter.Checkbutton(
-            master=Frame_Window_Saham, background="#535353", foreground="#ffffff", padx=10, 
-            selectcolor="#2d2d2d", activebackground="#535353", activeforeground="#ffffff",
-            text=(str(Ticker_Saham[i]) + "\t" + str(Nama_Emiten[i])), textvariable=Ticker_Saham[i]
+        # Pilihan_Saham = tkinter.Checkbutton(
+        #     master=Frame_Window_Saham, background="#535353", foreground="#ffffff", padx=10, 
+        #     selectcolor="#2d2d2d", activebackground="#535353", activeforeground="#ffffff",
+        #     text=(str(Ticker_Saham[i]) + "\t" + str(Nama_Emiten[i])), variable=Ticker_Saham[i],
+        #     onvalue=Ticker_Saham[i]
+        # )
+        # Pilihan_Saham.grid(column=0, row=i, sticky=tkinter.W)
+
+        Pilihan_Saham = tkinter.Label(master=Frame_Window_Saham, text=(str(Ticker_Saham[i]) + "\t" + str(Nama_Emiten[i])),
+            background="#535353", foreground="#ffffff", activebackground="#535353", activeforeground="#ffffff", justify=LEFT
         )
         Pilihan_Saham.grid(column=0, row=i, sticky=tkinter.W)
 
     Get_Option_Saham = tkinter.Button(
-        master=Mini_Frame, text="Simpan Pilihan",
-        background="#535353", foreground="#ffffff", activebackground="#707070", activeforeground="#ffffff", 
-        command=Pilihan_Saham.select()
+        master=Mini_Frame, text="Ambil Data Saham", background="#535353", foreground="#ffffff", activebackground="#707070", activeforeground="#ffffff", 
+        command=call_dataframe
     )
     Get_Option_Saham.grid(column=0, row=0, sticky=tkinter.W)
 
-    Unselect_Option_Saham = tkinter.Button(
-        master=Mini_Frame, text="Hapus Pilihan",
-        background="#535353", foreground="#ffffff", activebackground="#707070", activeforeground="#ffffff", 
-        command=Pilihan_Saham.deselect()
-    )
+    Unselect_Option_Saham = tkinter.Button(master=Mini_Frame, text="Batalkan", background="#535353", foreground="#ffffff", activebackground="#707070", activeforeground="#ffffff", command=Window_Saham.destroy)
     Unselect_Option_Saham.grid(column=1, row=0, sticky=tkinter.E)
 
 # method untuk memanggil dataframe
@@ -144,15 +147,7 @@ Label_Tanggal.grid(column=0, row=3, padx=10, pady=5, sticky=tkinter.W)
 Input_Sektor = ttk.Combobox(master=Main_Frame, width=37, height=1, justify=LEFT, values=Nama_Sektor, textvariable=Kode_Sektor)
 Input_Sektor.grid(column=1, row=0, padx=10, pady=5, sticky=tkinter.W)
 
-Pilih_Saham = tkinter.Button(
-    master=Main_Frame, 
-    text="Pilih Saham", 
-    background="#535353", 
-    foreground="#ffffff", 
-    activebackground="#707070", 
-    activeforeground="#ffffff",
-    command=Select_Stocks
-    )
+Pilih_Saham = tkinter.Button(master=Main_Frame, text="Pilih Saham", background="#535353", foreground="#ffffff", activebackground="#707070", activeforeground="#ffffff", command=Select_Stocks)
 Pilih_Saham.grid(column=1, row=1, padx=10, pady=5, sticky=tkinter.W)
 
 Input_Modal_Investasi = tkinter.Entry(master=Main_Frame, width=40, background="#2D2D2D", foreground="#FFFFFF", insertbackground="#FFFFFF")
@@ -182,6 +177,8 @@ Optimum_Button.grid(column=0, row=0, sticky=tkinter.W)
 
 Exit_Button = tkinter.Button(master=Button_Frame, text="Keluar Aplikasi", background="#535353", foreground="#FFFFFF", activebackground="#707070", activeforeground="#ffffff", width=12, command=quit)
 Exit_Button.grid(column=1, row=0, sticky=tkinter.E, padx=50)
+
+
 
 
 
