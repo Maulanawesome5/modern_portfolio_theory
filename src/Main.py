@@ -113,12 +113,19 @@ def Select_Stocks():
 
 # method untuk memanggil dataframe
 def call_dataframe():
-    df = DataReader(
-        [], # nanti diisi ticker saham berupa tipe data string yang digabung dalam satu list
-        'yahoo',
-        start=startDate.get(),
-        end=endDate.get()
-    )
+    kode_ticker = []
+
+    # Loop untuk menyambungkan ".JK" kedalam tiap nama saham
+    for i in range(len(Ticker_Saham)):
+        kode_ticker.append(str(Ticker_Saham[i]) + ".JK")
+
+    # Dataframe yang terbentuk setelah list saham dimasukkan
+    df = DataReader(kode_ticker, 'yahoo', start=startDate.get(), end=endDate.get())
+    df = df['Close']
+
+    print(df)
+    return df
+
 
 ### MySQL Connection
 Koneksi.commit()
