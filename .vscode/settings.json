@@ -1,9 +1,10 @@
 {
     "editor.minimap.enabled": true,
     "editor.fontSize": 16,
-    "python.defaultInterpreterPath": "C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python310\\python",
+    // "python.defaultInterpreterPath": "C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python310\\python",
     "workbench.iconTheme": "vscode-icons",
     // "workbench.colorTheme": "Dracula",
     "workbench.colorTheme": "Monokai",
     // "workbench.colorTheme": "Default Light+",
+    "python.defaultInterpreterPath": "C:\\Users\\KELUARGA HUMORIS\\AppData\\Local\\Programs\\Python\\Python310\\python",
 }
