@@ -1,7 +1,9 @@
 from tkinter import BOTH, CENTER, LEFT, TOP, ttk
+import pandas_datareader
 from pymysql import *
 from pandas_datareader import DataReader
 import tkinter
+import pandas # modified by Hernaldi K. S.
 
 """
 Tabel 1. daftar_saham_indonesia
@@ -53,7 +55,10 @@ def Select_Stocks():
     ### MySQL Connection
     Koneksi = Connection(host="localhost", user="root", database="saham_indonesia")
     Kursor = Koneksi.cursor()
-    Kursor.execute(f"SELECT * FROM daftar_saham_indonesia WHERE sektor_usaha = '{Input_Sektor.get()}';")
+    # Kursor.execute(f"SELECT * FROM daftar_saham_indonesia WHERE sektor_usaha = '{Input_Sektor.get()}';")
+    Kursor.execute(
+        f"SELECT * FROM daftar_saham_indonesia WHERE (sektor_usaha = '{Input_Sektor.get()}' AND tglListing < '{startDate.get()}');"
+    ) # Modified by Hernaldi K. S.
     Daftar_Saham = Kursor.fetchall()
     # print(Daftar_Saham, "\n")
 
@@ -74,10 +79,10 @@ def Select_Stocks():
     Koneksi.close()
 
     # Second window untuk menampilkan daftar saham
-    # Second window untuk menampilkan daftar saham
     Window_Saham = tkinter.Toplevel()
     Window_Saham.title(f"Daftar Saham Sektor {Input_Sektor.get()}")
-    Window_Saham.iconbitmap('D:/LATIHAN PEMROGRAMAN/(METODE PENELITIAN)/icon/business_stock.ico')
+    # Window_Saham.iconbitmap('D:/LATIHAN PEMROGRAMAN/(METODE PENELITIAN)/icon/business_stock.ico')
+    Window_Saham.iconbitmap('D:/LATIHAN PEMROGRAMAN/(METODE PENELITIAN)/modern_portfolio_theory/icon/business_stock.ico') # laptop hernaldi
 
     Frame_Window_Saham = tkinter.Frame(master=Window_Saham, background="#535353", height=300, width=400)
     Frame_Window_Saham.pack(fill=BOTH, anchor=CENTER, side=TOP)
@@ -123,6 +128,11 @@ def call_dataframe():
     df = DataReader(kode_ticker, 'yahoo', start=startDate.get(), end=endDate.get())
     df = df['Close']
 
+    # modified by Hernaldi K. S.
+    # df_backup = df.copy(deep=True) # Backup dataframe yang utama, karena beberapa saham terdapat NaN value
+
+    #df = df. # Menghapus missing value / NaN pada baris dataframe jika ada
+
     print(df)
     return df
 
@@ -136,7 +146,8 @@ Koneksi.close()
 ## Top Level Widget
 Main_Window = tkinter.Tk()
 Main_Window.title('Optimasi Portofolio Saham')
-Main_Window.iconbitmap('D:/LATIHAN PEMROGRAMAN/(METODE PENELITIAN)/icon/business_stock.ico')
+# Main_Window.iconbitmap('D:/LATIHAN PEMROGRAMAN/(METODE PENELITIAN)/icon/business_stock.ico')
+Main_Window.iconbitmap('D:/LATIHAN PEMROGRAMAN/(METODE PENELITIAN)/modern_portfolio_theory/icon/business_stock.ico') # laptop hernaldi
 Main_Frame = tkinter.Frame(master=Main_Window, background="#535353", height=300, width=400)
 Main_Frame.pack(fill=BOTH, anchor=CENTER, side=TOP)
 
@@ -165,14 +176,16 @@ Mini_Frame = tkinter.Frame(master=Main_Frame, width=40, height=1, background="#5
 Mini_Frame.grid(column=1, row=3, padx=10, pady=5, sticky=tkinter.W)
 
 startDate = tkinter.Entry(master=Mini_Frame, width=15, background="#2D2D2D", foreground="#FFFFFF", insertbackground="#FFFFFF")
-startDate.insert(0, "e.g. 2020/12/31")
+# startDate.insert(0, "e.g. 2020/12/31")
+startDate.insert(0, "e.g. 2020-12-31") # Modified by Hernaldi K. S.
 startDate.grid(column=0, row=0, sticky=tkinter.W)
 
 sampaiDengan = tkinter.Label(master=Mini_Frame, text="s/d", background="#535353", foreground="#FFFFFF", width=7)
 sampaiDengan.grid(column=1, row=0, sticky=tkinter.W)
 
 endDate = tkinter.Entry(master=Mini_Frame, width=15, background="#2D2D2D", foreground="#FFFFFF", insertbackground="#FFFFFF")
-endDate.insert(0, "e.g. 2021/12/31")
+# endDate.insert(0, "e.g. 2021/12/31")
+endDate.insert(0, "e.g. 2021-12-31") # Modified by Hernaldi K. S.
 endDate.grid(column=2, row=0, sticky=tkinter.W)
 
 ## Process Widget
