@@ -38,3 +38,9 @@ UPDATE sektorEnergi SET sektor_usaha = 'Energi' WHERE kode_sektor = 'IDX:A'; -- 
 SELECT * FROM sektorEnergi; -- Menampilkan kolom beserta isinya
 TRUNCATE sektorEnergi; -- Menghapus seluruh data yang sudah ada didalam kolom
 DESCRIBE sektorEnergi; -- Menampilkan pengaturan tabel
+
+
+-- Cara memfilter daftar saham, berdasarkan nama sektor dan tanggal listing
+-- yang diurutkan berdasarkan tanggal listing < 2021-Jan-01
+-- Sehingga bisa memanggil DataFrame dalam rentang waktu 5 tahun
+SELECT * FROM daftar_saham_indonesia WHERE (sektor_usaha = 'Energi' AND tglListing < '2021-01-01') ORDER BY tglListing;
